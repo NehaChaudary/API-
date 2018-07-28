@@ -1,0 +1,25 @@
+<b><p>Show Detail :search by country</p></b>
+<form>
+<div>
+  <input name="cName" type="text" placeholder="enter country name" [(ngModel)]="countryName">
+</div>
+<button type="button" (click)="showData()">Search By name</button>
+<hr>
+<button type="button" (click)="showAllData()">ALL</button>
+</form>
+<table>
+  <tr>
+    <th>Country Name</th>
+    <th>AlphaCode 1</th>
+    <th>AlphaCode 2</th>
+    <th>CallinCode</th>
+  </tr>
+  <tr *ngFor="let col of country">
+    <td>{{col.name}}</td>
+    <td>{{col.alpha2Code}}</td>
+    <td>{{col.alpha3Code}}</td>
+    <td>{{col.callingCodes}}</td>
+  </tr>
+</table>
+
+
